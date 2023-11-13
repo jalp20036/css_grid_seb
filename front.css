@@ -1,0 +1,84 @@
+* {
+    
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+
+    background: #E9ECF4;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4);
+    grid-template-areas: "cabecera cabecera cabecera"
+                        "menu principal principal"
+                        "pie pie pie";
+
+}
+
+.container .cabecera,
+.container .menu,
+.container .principal,
+.container .pie {
+
+    background: white;
+    padding: 20px;
+
+}
+
+.container .cabecera {
+
+    background: yellow;
+    color: white;
+    grid-area: cabecera;
+
+}
+
+.container .menu {
+
+    background: blue;
+    color: white;
+    grid-area: menu;
+
+}
+
+.container .principal {
+
+    background: red;
+    color: white;
+    grid-area: principal;
+
+}
+
+.container .pie {
+
+    background: #12203E;
+    color: white;
+    grid-area: pie;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-areas: "cabecera cabecera cabecera"
+                            "menu menu menu"
+                            "principal principal principal"
+                            "pie pie pie";
+
+    }
+    
+}
+
